@@ -1,0 +1,32 @@
+.body_backgorund {
+    background-image: url("bg1.jpg");
+    background-position: center;
+    background-size: cover;
+  }
+  body{
+    cursor: pointer;
+  }
+  #heading {
+      color:blueviolet; 
+      font-size: 40px;
+  }
+  #myCanvas
+  {
+      border-width:8px;
+      background-color: white; 
+      border-style:ridge;
+      border-color:fuchsia;
+  }
+
+  button {
+    background-color:blueviolet;
+    border: none;
+    color: white;
+    padding: 8px 35px;
+    font-size: 16px;
+  }
+
+  input
+  {
+    margin-right: 20px;
+  }
