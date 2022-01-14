@@ -1,4 +1,4 @@
-var last_position_of_x, last_position_of_y;
+    var last_position_of_x, last_position_of_y;
 
     canvas = document.getElementById('myCanvas');
     ctx = canvas.getContext("2d");
@@ -76,15 +76,15 @@ function my_touchmove(e)
 canvas.addEventListener("mousemove", my_mousemove);
     function my_mousemove(e){
 
+        current_position_of_mouse_x= e.clientX - canvas.offsetLeft;
+        current_position_of_mouse_y = e.clientY - canvas.offsetTop;
+        
         if (mouseEvent=="mousedown"){
         console.log("Current position of x and y coordinates = ")        
         console.log("x = " + current_pos_mouse_x + "y = " + current_pos_mouse_y);
-        color=document.getElementById("Color").value;
-        lineWidth=document.getElementById("line_width").value;
-        ctx.strokeStyle = color;
-        ctx.lineWidth = width_of_line;
         ctx.beginPath();
-        
+        ctx.strokeStyle = color;
+        ctx.lineWidth = width_of_line;        
         console.log("Last position of x and y coordinates = ");
         console.log("x = " + last_position_of_x + "y = " + last_position_of_y);
         ctx.moveTo(last_position_of_x, last_position_of_y);
