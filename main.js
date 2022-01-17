@@ -61,6 +61,11 @@ function my_touchmove(e)
         last_position_of_touch_y = current_position_of_touch_y;
     }
 
+ canvas.addEventListener("mousedown" , my_mousedown);
+ canvas.addEventListener("mouseleave" , my_mouseleave);
+ canvas.addEventListener("mouseup" , my_mouseup);
+ canvas.addEventListener("mousemove" , my_mousemove);
+  
     function my_mousedown(e){
         mouseEvent="mousedown";
         color=document.getElementById("Color").value;
@@ -80,7 +85,7 @@ canvas.addEventListener("mousemove", my_mousemove);
         
         if (mouseEvent=="mousedown"){
         console.log("Current position of x and y coordinates = ")        
-        console.log("x = " + current_position_of_mouse_x + "y = " + current_position_mouse_of_y);
+        console.log("x = " + current_position_of_mouse_x + "y = " + current_position_of_mouse_y);
         ctx.beginPath();
         ctx.strokeStyle = color;
         ctx.lineWidth = width_of_line;        
